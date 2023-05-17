@@ -1,0 +1,62 @@
+body{
+  background-color: rgb(248, 227, 238);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 50px;
+}
+
+.left {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.right {
+  flex: 1;
+}
+
+.header{
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  background-color: rgb(126, 28, 59);
+  color: aliceblue;
+  font-size: 28px;
+  text-align: center;
+}
+
+.image{
+   margin-top: 60px;
+  width: 100%;
+  height: auto;
+}
+
+.text{
+  text-align: justify;
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+h2{
+  margin-top: 0px;
+}
+
+.prediction_area{
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+.output{
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+.button1{
+  font-size: 30px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Home.css') }}" media="screen">
+    <title>Breast Cancer Detection</title>
+    
+  </head>
+  <body>
+   <div class="container">
+  <div class="left">
+    <div class="header">
+      <h2>Early Detection of Breast Cancer</h2>
+    </div>
+    <img class="image" src="{{ url_for('static',filename='images/breastcancer.jpg') }}">
+  </div>
+  <div class="right">
+    <div class="header">
+      <h2>Detect the Tumor in the Breast</h2>
+    </div>
+    <div>
+      <p class="text">Breast cancer is one of the main causes of cancer deaths worldwide. Early diagnostics significantly increases the chances of correct treatment and survival, but this process is tedious and often leads to a disagreement between pathologists. Computer-aided diagnosis systems showed potential for improving the diagnostic accuracy. But early detection and prevention can significantly reduce the chances of death. It is important to detect breast cancer as early as possible. This application is based on Convolution Neural Networks which classifies the scan as either benign or malignant tumor.</p>
+    </div>
+    <div class="prediction_area">
+      <h3>Drop in the scan for prediction</h3>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">Upload your image:</label>
+        <input class="button1" type="file" id="file" name="file"><br><br>
+        <input class="button1" type="submit" value="Upload">
+      </form>
+    </div>
+    <div class="output">
+      <ul class="out1">
+        {% for item in occurance %}
+        {{ item }}
+        {% endfor %}
+      </ul>
+
+      <ul class="out2">
+        {% if image %}
+        <img style="height: 200px;width: 200px;" src="{{ url_for('uploaded_file', filename=filename) }}">
+        {% endif %}
+      </ul>
+
+      <ul class="out3">
+        {% for item2 in child_occur %}
+        {{ item2 }}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  </body>
+</html>
